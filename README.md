@@ -7,11 +7,18 @@ This repository contains the work for a project focused on enhancing a baseline 
 In this project, enhancements to a baseline model (VSLNet) for the Ego4D Natural Language Queries (NLQ) benchmark are presented, aimed at improving temporal localization performance within egocentric videos. Different video feature encoders, specifically Omnivore and EgoVLP, are systematically evaluated to analyze their impact on model accuracy. Moreover, the efficacy of different language embeddings (BERT and GloVe) is compared to determine their suitability for temporal localization tasks. To extend the analysis, 50 queries with correctly retrieved segments are manually annotated to define textual ground truths. The corresponding clips are extracted via ffmpeg and processed with the Video-LLaVA model to generate textual responses, which are then evaluated using different metrics.
 
 ## Repository Structure
-
-The repository is organized into two main directories:
-
--   **/paper:** Contains the detailed project report (`Egocentric_vision.pdf`).
--   **/notebooks:** Contains the Jupyter notebooks for this project.
+The repository is organized as:
+```
+Natural-language-queries-in-Egocentric-vision
+    ├── notebook/                              
+        └── Ego4D_NLQ_Benchmark.ipynb           # code to compare model architectures, feature extractor
+        └── egovlp_vslnet_extension.ipynb       # code related to the extension
+    ├── paper/
+        └── paper.pdf
+    ├── .gitattributes
+    ├── README.md                               # description of the project
+    └── requirements.txt                              
+```
 
 ## Notebooks
 
@@ -20,8 +27,6 @@ This project includes two main Jupyter notebooks:
 -   **`Ego4D_NLQ_Benchmark.ipynb`**: This notebook serves as a quickstart for the Ego4D Moments Benchmark (NLQ) task. It details setting up the environment, downloading data, and training the baseline VSLBase and VSLNet model with Omnivore and egoVLP features.
 
 -   **`egovlp_vslnet_extension.ipynb`**: This notebook extends the baseline by implementing and evaluating the VSLNet model with EgoVLP features. It also contains the analysis using the Video-LLaVA model on a manually annotated subset of queries, with results evaluated using metrics such as BLEU and ROUGE.
-
--   **Note:** GitHub may have trouble rendering the interactive outputs in this notebook. For a guaranteed perfect view, please use [nbviewer](https://nbviewer.org/github/Keremm26/Egocentric-NLQ/blob/main/notebooks/egovlp_vslnet_extension.ipynb).
 
 ## Getting Started
 
